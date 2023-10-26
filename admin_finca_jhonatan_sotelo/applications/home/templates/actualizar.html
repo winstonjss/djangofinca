@@ -1,0 +1,81 @@
+<nav class="navbar navbar-expand-lg" style="background-color: #0d6efd;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../home">Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="../listar">Listar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../crear">Crear</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../actualizar">Actualizar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../eliminar">Eliminar</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container text-center">    
+    <div class="row align-items-start">
+      <div class="col">
+        Id
+      </div>
+      <div class="col">
+        Finca
+      </div>
+      <div class="col">
+        Hectareas
+      </div>
+      <div class="col">
+        Metros2
+      </div>
+      <div class="col">
+        Propietario
+      </div>
+      <div class="col">
+        Cultivo
+      </div>
+      <div class="col">
+        Editar
+      </div>
+    </div>
+  </div>
+  <div class="container text-center">    
+    {% for object in object_list %}
+    <div class="row align-items-start">
+      <div class="col">
+        {{ object.id }}
+      </div>
+      <div class="col">
+        {{ object.finca }}
+      </div>
+      <div class="col">
+        {{ object.hectareas }}
+      </div>
+      <div class="col">
+        {{ object.metros2 }}
+      </div>
+      <div class="col">
+        {{ object.propietario }}
+      </div>
+      <div class="col">
+        {{ object.cultivo }}
+      </div>
+      <div class="col">
+        <a href="../{{ object.id }}/actualizarid" target="_blank">Editar</a>
+      </div>
+    </div>
+    
+    {% endfor %}
+  </div>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
